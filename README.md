@@ -23,8 +23,9 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ### Screenshot
 
 ![Desktop Screenshot](./images/desktop.png)
-![Mobile Screenshot](./images/mobile.jpg)
-
+<div align = center>
+<img src="./images/mobile.jpg"  alt="Mobile Screenshot" />
+</div>
 
 ### Links
 
