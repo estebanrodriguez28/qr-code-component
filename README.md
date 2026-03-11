@@ -32,9 +32,9 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&logo=css&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-![Accessibility](https://img.shields.io/badge/Accessibility-%230170EA.svg?style=for-the-badge&logo=Accessibility&logoColor=white)
 
-<img src="./images/desktop.png" alt="Website Screenshot" />
+
+<img src="./images/desktop.png" width="95%" alt="Website Screenshot" />
 
 </div>
 
