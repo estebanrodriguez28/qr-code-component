@@ -22,13 +22,13 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Screenshot
 
-![](./images/desktop.png)
-![](./images/mobile.png)
+![Desktop Screenshot](./images/desktop.png)
+![Mobile Screenshot](./images/mobile.png=100x20)
 
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://estebanrodriguez28.github.io/qr-code-component/)
+- Live Site URL: [Live Site](https://estebanrodriguez28.github.io/qr-code-component/)
 
 ## My process
 
@@ -98,8 +98,22 @@ In dev tools that property was struck through, it was being overidden somehow. M
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet">
 ```
 
-- Theres semantic vs non semantic html. Non semantic html like <div> or <span> do not convey the meaning of what they do. Semantic means the tags clearly convey the meaning of what they represent. For example I used the <section> tag to mark a section. There are other semantic tags like:
-<nav>, <footer>, <header>, <main>
+- Theres semantic vs non semantic html. Non semantic html like 
+```html
+<div>
+<span>
+```
+ do not convey the meaning of what they do. Semantic means the tags clearly convey the meaning of what they represent. For example I used the section tag to implement semantic  html: 
+ ```html
+ <section>
+```
+ There are other semantic tags like:
+ ```html
+<nav>
+<footer>
+<header>
+<main>
+```
 
 Semantic html helps with ascessibility and SEO.
 
@@ -114,13 +128,11 @@ Also, I would like to focus on mobile first development in the future. Starting 
 
 ### Useful resources
 
-- [Centering Div](https://dev.to/amoreno/3-ways-to-center-a-div-in-css-that-actually-work-30ge) - This helped me for to center a div with flexbox using viewport. Blog posts like this are really helpful.
-- [Centering Div Mistake](https://blog.devgenius.io/why-your-flexbox-isnt-centering-the-hidden-css-mistake-beginners-make-98baa3738588?gi=a693f27c081c) - This article helped me understand why the card was not being centered vertically on the page. Explained you need to add a height to the flex container.
-- [Figma to Code] (https://www.frontendmentor.io/articles/figma-for-developers-how-to-work-with-a-design-file-m6CZKZ1rC1) - Article for converting Figma designs into code
+- [Centering Div](https://dev.to/amoreno/3-ways-to-center-a-div-in-css-that-actually-work-30ge) - This helped me to center a div with flexbox using viewport. Blog posts like this are really helpful.
+- [Centering Div Flexbox Mistake](https://blog.devgenius.io/why-your-flexbox-isnt-centering-the-hidden-css-mistake-beginners-make-98baa3738588?gi=a693f27c081c) - This article helped me understand why the card was not being centered vertically on the page. Explained you need to add a height to the flex container.
+- [Figma to Code](https://www.frontendmentor.io/articles/figma-for-developers-how-to-work-with-a-design-file-m6CZKZ1rC1) - Article for converting Figma designs into code
 
 ### AI Collaboration
-
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
 
 - I wrote this code mostly myself, using resources like w3schools for finding css and html like how to make a div into a card
 - I did use Claude for trying to understand why the spacing in Figma was different than the padding I put to make the ui match. I also asked why when I set a div to 100vh and set a background color there is still some white space which is where I learned about the built in margins for every web page.
@@ -130,7 +142,6 @@ Describe how you used AI tools (if any) during this project. This helps demonstr
 
 ## Author
 
-- Website - [Esteban Rodriguez](https://estebanrodriguez28.github.io/qr-code-component/)
 - Frontend Mentor - [@estebanrodriguez28](https://www.frontendmentor.io/profile/estebanrodriguez28)
 
 
