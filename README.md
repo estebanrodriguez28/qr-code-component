@@ -1,98 +1,141 @@
-# Frontend Mentor - QR code component
+# Frontend Mentor - QR code component solution
 
-![Design preview for the QR code component coding challenge](./preview.jpg)
+This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+  - [AI Collaboration](#ai-collaboration)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
 
-## The challenge
+## Overview
 
-Your challenge is to build out this QR code component and get it looking as close to the design as possible.
+### Screenshot
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+![](./images/desktop.png)
+![](./images/mobile.png)
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
 
-## Where to find everything
+### Links
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+- Live Site URL: [Add live site URL here](https://estebanrodriguez28.github.io/qr-code-component/)
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+## My process
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+### Built with
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+- Semantic HTML5 markup
+- CSS 
+- Flexbox
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
 
-## Using AI coding assistants
+### What I learned
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+- How to center a div with flexbox importantly running into the bug that a height has to be set for the parent flex container to center the card in the screen
+    - Flexbox is a way to arrange items in a row or column, there is a parent container known as the flex container which must have display set to flex. Importantly the flex container have a height set as flexbox is just a way to arrange items 
+    - I used viewport to center the qr code, view height is with the unit vh however there's dynamic view port (dvh) where if theres changes in the screen, like on mobile where the address bar can collapse, the viewport is automatically adjusted making sure the ui stays consistent
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+```html
+<div class="container">
+<!-- 
+    Rest of html (the actual qr code component)
+    -->
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
+</div>
+```
+```css
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
 
-## Building your project
+}
+```
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+- Browsers have a built in margin so for projects you can reset the margin like this
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+```css
+body {
+    margin: 0;
+    background-color: #D5E1EF;
+}
+```
 
-## Deploying your project
+- Max-width is better than width in creating responsive uis as say your using px but for smaller screens they dont have enough width or height for that px then it goes off screen. If use max-width or max-height instead the content adjust based on screen size
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+```css
+.qr-image {
+    border-radius: 10px;
+    max-width: 100%;
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+}
+```
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+- A small detail but for importing the google fonts in the html I had to import for the specific font both the regular weight and the bolded version of the font. Not sure why but when I only did regular weight and for the bold text tried to set it to bold with font weight:
+```css 
+font-weight: bold
+```
+In dev tools that property was struck through, it was being overidden somehow. Maybe the fact I was importing only the font as unbolded was overriding that css. Also I was missing the preconnect parts for the google apis which was not allowing me to get the font, so those should be included as well in future for using google fonts.
 
-## Create a custom `README.md`
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+<link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet">
+```
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+- Theres semantic vs non semantic html. Non semantic html like <div> or <span> do not convey the meaning of what they do. Semantic means the tags clearly convey the meaning of what they represent. For example I used the <section> tag to mark a section. There are other semantic tags like:
+<nav>, <footer>, <header>, <main>
 
-## Submitting your solution
+Semantic html helps with ascessibility and SEO.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+### Continued development
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+I ran into a problem with inspecting the figma file and converting it to html/css. Specifically the spacing, I noticed that I had to add more padding in the css of the div for the text to get the card text to look like the figma design. When I inspected the figma design the spacing I saw was less than the actual spacing I put.
 
-## Sharing your solution
+In the future want to get more comfortable with Figma and translating the design to code as accurately as possible. Potentially learning Figma myself so I can understand its advantages and limitations like spacing.
 
-There are multiple places you can share your solution:
+Also, I would like to focus on mobile first development in the future. Starting out developing on mobile then move up to larger screens. This way I can follow best practices and can make the website look great for mobile, which most people are on.
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+### Useful resources
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+- [Centering Div](https://dev.to/amoreno/3-ways-to-center-a-div-in-css-that-actually-work-30ge) - This helped me for to center a div with flexbox using viewport. Blog posts like this are really helpful.
+- [Centering Div Mistake](https://blog.devgenius.io/why-your-flexbox-isnt-centering-the-hidden-css-mistake-beginners-make-98baa3738588?gi=a693f27c081c) - This article helped me understand why the card was not being centered vertically on the page. Explained you need to add a height to the flex container.
+- [Figma to Code] (https://www.frontendmentor.io/articles/figma-for-developers-how-to-work-with-a-design-file-m6CZKZ1rC1) - Article for converting Figma designs into code
 
-## Got feedback for us?
+### AI Collaboration
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+- I wrote this code mostly myself, using resources like w3schools for finding css and html like how to make a div into a card
+- I did use Claude for trying to understand why the spacing in Figma was different than the padding I put to make the ui match. I also asked why when I set a div to 100vh and set a background color there is still some white space which is where I learned about the built in margins for every web page.
+- I generally used Claude for understanding, why certain things werent working. I would like to use ai like this in the future, focusing on understanding and learning.
 
-**Have fun building!** 🚀
+
+
+## Author
+
+- Website - [Esteban Rodriguez](https://estebanrodriguez28.github.io/qr-code-component/)
+- Frontend Mentor - [@estebanrodriguez28](https://www.frontendmentor.io/profile/estebanrodriguez28)
+
+
+## Acknowledgments
+
+The several articles and blog posts helped me learned and develop important understanding in html/css. I would like to thank the authors of those resources as well as front end mentor for giving me the structure and flexibility to learn web development the right way.
+
+
