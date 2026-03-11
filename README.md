@@ -22,9 +22,19 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Screenshot
 
-| Desktop | Mobile |
-|---------|--------|
-| ![Desktop Screenshot](./images/desktop.png) | ![Mobile](./images/mobile.jpg) |
+
+<div align="center">
+<img src="./images/qr-code-icon.png" alt="QR Code Icon" />
+
+
+<h2> QR Code Component </h2>
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&logo=css&logoColor=white)
+
+<img src="./images/desktop.png" alt="Website Screenshot" />
+
+</div>
 
 
 
