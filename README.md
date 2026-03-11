@@ -22,10 +22,11 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Screenshot
 
-![Desktop Screenshot](./images/desktop.png)
-<div align = center>
-<img src="./images/mobile.jpg"  alt="Mobile Screenshot" />
-</div>
+| Desktop | Mobile |
+|---------|--------|
+| ![Desktop Screenshot](./images/desktop.png) | ![Mobile](./images/mobile.jpg) |
+
+
 
 ### Links
 
