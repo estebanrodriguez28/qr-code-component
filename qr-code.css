@@ -1,7 +1,16 @@
+:root {
+    --background-color: #D5E1EF;
+    --heading-font-color: #1F314F;
+    --body-font-color: #68778D;
+    --card-color: white;
+}
+
+
 body {
     margin: 0;
-    background-color: #D5E1EF;
+    background-color: var(--background-color);
 }
+
 
 .container {
     display: flex;
@@ -15,13 +24,13 @@ body {
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    width: 320px;
-    height: 499px;
-    background-color: white;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 320 / 499;
+    background-color: var(--card-color);
     border-radius: 20px;
-    padding: 16px 16px 20px;
-
+    padding: 1rem 1rem 1.25rem;
+    text-align: center;
 }
 
 
@@ -33,28 +42,28 @@ body {
 }
 
 .card-txt {
-    padding: 0px 32px;
+    padding: 0rem 2rem;
 
+}
+
+.outfit-style {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .outfit-txt {
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    color: #1F314F;
-    font-style: normal;
-    font-size: 22px;
+    color: var(--heading-font-color);
+    font-size: 1.375rem;
     line-height: 120%;
-    text-align: center;
+
 }
 
 .outfit-body-txt {
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    color: #68778D;
-    font-style: normal;
-    font-size: 15px;
+    color: var(--body-font-color);
+    font-size: 0.9375rem;
     line-height: 140%;
-    text-align: center;
+
 }
